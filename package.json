@@ -1,0 +1,29 @@
+{
+  "name": "Caps",
+  "version": "0.0.1",
+  "description": "Caps application",
+  "main": "",
+  "private": true,
+  "readmeFilename": "README.md",
+  "scripts": {
+    "start": "nvm run v0.11.12 --harmony app.js"
+  },
+  "dependencies": {
+    "koa": "^0.5.1",
+    "koa-views": "^1.2.1",
+    "koa-hbs": "^0.4.3",
+    "koa-route": "^1.1.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.5.6",
+    "gulp-stylus": "^0.1.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-csso": "^0.2.6",
+    "gulp-uglify": "^0.2.1",
+    "gulp-watch": "^0.5.3",
+    "stylus": "^0.42.3",
+    "gulp-include": "^0.2.2",
+    "gulp-bower-files": "^0.1.12",
+    "gulp-inject": "^0.4.1"
+  }
+}
