@@ -12,7 +12,8 @@
     "koa": "^0.5.1",
     "koa-views": "^1.2.1",
     "koa-hbs": "^0.4.3",
-    "koa-route": "^1.1.1"
+    "koa-route": "^1.1.1",
+    "koa-static": "^1.4.3"
   },
   "devDependencies": {
     "gulp": "^3.5.6",
