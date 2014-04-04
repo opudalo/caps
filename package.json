@@ -6,14 +6,16 @@
   "private": true,
   "readmeFilename": "README.md",
   "scripts": {
-    "start": "nvm run v0.11.12 --harmony app.js"
+    "start": "node --harmony app.js"
   },
   "dependencies": {
     "koa": "^0.5.1",
     "koa-views": "^1.2.1",
     "koa-hbs": "^0.4.3",
     "koa-route": "^1.1.1",
-    "koa-static": "^1.4.3"
+    "koa-static": "^1.4.3",
+    "koa-rewrite": "^1.1.0",
+    "underscore": "^1.6.0"
   },
   "devDependencies": {
     "gulp": "^3.5.6",

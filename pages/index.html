@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en" ng-app="capsApp">
+<head>
+  <meta charset="utf-8">
+  <title>Caps project</title>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+    <ul class="phones">
+      <li ng-repeat="one in people">
+        <span>{{one.name}}</span>
+      </li>
+    </ul>
+</body>
+</html>
