@@ -6,7 +6,8 @@
   "private": true,
   "readmeFilename": "README.md",
   "scripts": {
-    "start": "node --harmony app.js"
+    "start": "node --harmony app.js",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "koa": "^0.5.1",
