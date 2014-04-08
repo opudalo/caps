@@ -1,0 +1,5 @@
+body {
+  background: #333;
+  -webkit-transition: all 2s linear;
+  transition: all 2s linear;
+}
