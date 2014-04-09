@@ -2,25 +2,44 @@ var gulp = require('gulp'),
   uglify = require('gulp-uglify'),
   concat = require('gulp-concat'),
   styl = require('gulp-stylus'),
-  watch = require('gulp-watch'),
+  nodemon = require('gulp-nodemon'),
   include = require('gulp-include'),
+  livereload = require('gulp-livereload'),
   prefix = require('gulp-autoprefixer'),
   bower = require("gulp-bower-files"),
 
   _ = {
     public: './public/',
     css: './public/css/',
-    styl: './public/styl/'
+    styl: './public/styl/',
+    pages: './pages/'
   }
 
-gulp.task('default', ['styl', 'watch'])
+gulp.task('default', ['run', 'watch'])
+
+gulp.task('run', function(cb) {
+  nodemon({
+    script: 'app.js',
+    ext: 'js',
+    ignore: ['/public/*', '/pages/*']
+  })
+})
+
 
 gulp.task('watch', function(cb) {
-  gulp.watch(_.styl + '*.styl', ['styl'])
+
+  var server = livereload()
+  function change(file) {
+      server.changed(file.path)
+  }
+
+  gulp.watch(_.styl + '**/*.styl', ['styl'])
+  gulp.watch(_.js + '**/*.js').on('change', change)
+  gulp.watch(_.pages + '**/*.html').on('change', change)
 })
 
 gulp.task('styl', function() {
-  gulp.src( _.styl + '*.styl')
+  gulp.src( _.styl + '**/*.styl')
     .pipe(include())
     .pipe(styl({
       use: ['nib'],
@@ -29,15 +48,7 @@ gulp.task('styl', function() {
     }))
     .pipe(prefix.apply(prefix, [ "last 2 versions"]))
     .pipe(gulp.dest( _.css ))
-})
-
-
-gulp.task('js', function() {
-  gulp.src( _.public + '/js/**')
-    .pipe(include())
-    .pipe(uglify())
-    .pipe(concat('all.min.js'))
-    .pipe(gulp.dest( _.build ))
+    .pipe(livereload())
 })
 
 gulp.task('vendor', function() {

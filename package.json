@@ -30,6 +30,8 @@
     "gulp-include": "^0.2.2",
     "gulp-bower-files": "^0.1.12",
     "gulp-inject": "^0.4.1",
-    "gulp-livereload": "^1.2.0"
+    "gulp-livereload": "^1.2.0",
+    "gulp-nodemon": "^1.0.2",
+    "tiny-lr": "0.0.5"
   }
 }
