@@ -1,4 +1,56 @@
+*
+  box-sizing border-box
+body
+  font-family Helvetica, sans
+  background-color #fcfcfc
 .container
   width 800px
   margin 0 auto
+
+.clearfix
+    &:before, &:after
+        content: " "
+        display: table
+    &:after
+        clear: both
+
+.people
+  padding 20px 0
+  display table
+
+  &-avatar
+    w = 40px
+    width w
+    display table-cell
+    img
+      border-radius w * 0.5
+      width w
+      height w
+
+  &-desc
+    display table-cell
+    vertical-align top
+    padding-left 10px
+    line-height 20px
+
+  &-name
+    font-size 15px
+    color #222
+  &-title
+    font-size 13px
+    color #999
+.caps
+  margin-left: 40px
+.cap
+  display inline-block
+  float left
+  margin 0 20px 20px 0 
+  w = 150px
+  width w
+  height w
+  img
+    width w
+    height w
+
+
 

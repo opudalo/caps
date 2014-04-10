@@ -1,4 +1,61 @@
+* {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  font-family: Helvetica, sans;
+  background-color: #fcfcfc;
+}
 .container {
   width: 800px;
   margin: 0 auto;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.people {
+  padding: 20px 0;
+  display: table;
+}
+.people-avatar {
+  width: 40px;
+  display: table-cell;
+}
+.people-avatar img {
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+}
+.people-desc {
+  display: table-cell;
+  vertical-align: top;
+  padding-left: 10px;
+  line-height: 20px;
+}
+.people-name {
+  font-size: 15px;
+  color: #222;
+}
+.people-title {
+  font-size: 13px;
+  color: #999;
+}
+.caps {
+  margin-left: 40px;
+}
+.cap {
+  display: inline-block;
+  float: left;
+  margin: 0 20px 20px 0;
+  width: 150px;
+  height: 150px;
+}
+.cap img {
+  width: 150px;
+  height: 150px;
 }

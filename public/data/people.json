@@ -3,30 +3,35 @@
         "name": "Yuriy Tanskiy",
         "title": "Designer",
         "photo": "/img/pic/yuraT.png",
-        "started":"2/14/2012"
+        "started":"2/14/2012",
+        "caps": [0,1,2,3]
     },
     {
         "name": "Zhenya Chechurin",
         "title": "Front-end Developer",
         "photo": "/img/pic/zhenjaX.png",
-        "started":"3/20/2013"
+        "started":"3/20/2013",
+        "caps": [0,1,2,3]
     },
     {
         "name": "Igor Kononuchenko",
         "title": "Team Lead",
         "photo": "img/pic/igorK-30.png",
-        "started":"1/29/2011"
+        "started":"1/29/2011",
+        "caps": [0,1,2,3]
     },
     {
         "name": "Yuriy Bogdanov",
         "title": "Software Developer, Erlang",
         "photo": "/img/pic/yuraB.png",
-        "started":"3/12/2013"
+        "started":"3/12/2013",
+        "caps": [0,1,2,3]
     },
     {
         "name": "Dima Fillipenko",
         "title": "Front-end Developer",
         "photo": "img/pic/fil.png",
-        "started":"12/18/2013"
+        "started":"12/18/2013",
+        "caps": [0,1,2,3]
     }
 ]

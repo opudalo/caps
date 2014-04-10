@@ -12,15 +12,24 @@
 
 <body ng-controller="MainCtrl">
   <div class="container">
-    <div class="person" ng-repeat="one in people">
-      <div class="person-avatar">
-        <img ng-src="{{one.photo}}" alt="" />
+    <div class="clearfix" ng-repeat="one in people">
+      <div class="people">
+        <div class="people-avatar">
+          <img ng-src="{{one.photo}}" alt="" />
+        </div>
+        <div class="people-desc">
+          <div class="people-name">
+            {{one.name}}
+          </div>
+          <div class="people-title">
+            {{one.title}}
+          </div>
+        </div>
       </div>
-      <div class="person-name">
-        {{one.name}}
-      </div>
-      <div class="person-title">
-        {{one.title}}
+      <div class="caps" ng-repeat="cap in one.caps">
+          <div class="cap">
+            <img ng-src="{{caps[cap].img}}" alt="{{caps[cap].name" />
+          </div>
       </div>
     </div>
   </div>
