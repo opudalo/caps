@@ -11,10 +11,18 @@
 </head>
 
 <body ng-controller="MainCtrl">
-  <ul>
-    <li ng-repeat="one in people">
-      <span>{{one.name}}</span>
-    </li>
-  </ul>
+  <div class="container">
+    <div class="person" ng-repeat="one in people">
+      <div class="person-avatar">
+        <img ng-src="{{one.photo}}" alt="" />
+      </div>
+      <div class="person-name">
+        {{one.name}}
+      </div>
+      <div class="person-title">
+        {{one.title}}
+      </div>
+    </div>
+  </div>
 </body>
 </html>

@@ -12,6 +12,7 @@ var gulp = require('gulp'),
     public: './public/',
     css: './public/css/',
     styl: './public/styl/',
+    js: './public/js/',
     pages: './pages/'
   }
 
@@ -27,15 +28,14 @@ gulp.task('run', function(cb) {
 
 
 gulp.task('watch', function(cb) {
-
   var server = livereload()
   function change(file) {
-      server.changed(file.path)
+    server.changed(file.path);
   }
 
   gulp.watch(_.styl + '**/*.styl', ['styl'])
-  gulp.watch(_.js + '**/*.js').on('change', change)
-  gulp.watch(_.pages + '**/*.html').on('change', change)
+  gulp.watch(_.js + '**').on('change', change)
+  gulp.watch(_.pages + '**').on('change', change)
 })
 
 gulp.task('styl', function() {
