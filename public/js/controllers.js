@@ -87,14 +87,14 @@ app.controller('MainCtrl', function($scope, $http) {
       give = $scope.give
   
     if(give.capId != null) {
-      capName = $scope.caps && $scope.caps[give.capId].name
+      capName = $scope.caps && ($scope.caps[give.capId].name + ' ')
     }
 
     if(give.peopleId != null) {
       peopleName = $scope.people && (' ' + $scope.people[give.peopleId].name + ' for')
     }
 
-    give.placeholder = ["This", capName + "cap", "is given to" + peopleName + "…"].join(' ')
+    give.placeholder = ["I give this", capName + "cap", "to" + peopleName + "…"].join(' ')
       
     console.log($scope.give)
   }

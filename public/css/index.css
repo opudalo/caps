@@ -333,8 +333,12 @@ body {
 .give-reason {
   padding: 20px;
 }
+.give-reason-header,
 .give-reason textarea {
-  width: 100%;
+  width: 60%;
+  margin: 0 20%;
+}
+.give-reason textarea {
   border: none;
   resize: none;
   outline: none;
