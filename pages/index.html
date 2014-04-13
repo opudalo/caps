@@ -13,8 +13,8 @@
 
 <body ng-controller="MainCtrl">
   <div class="container">
-    <div class="btn-cap" ng-click="">Give a Cap</div>
-    <div class="give-a-cap clearfix">
+    <div class="btn-cap" ng-click="showGive()">Give a Cap</div>
+    <div class="give-a-cap clearfix" ng-show="giveShown">
       <div class="give-people">
         <div class="give-people-item"
           ng-repeat="one in people"
@@ -65,7 +65,7 @@
           </div>
         </div>
       </div>
-      <div class="cap" ng-repeat="cap in one.caps">
+      <div class="cap" ng-repeat="cap in one.caps | reverse">
           <div class="cap-item">
             <img ng-src="{{caps[cap.id].img}}" alt="{{caps[cap.id].name" />
           </div>

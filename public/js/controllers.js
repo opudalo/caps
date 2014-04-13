@@ -4,20 +4,28 @@
 
 var capsApp = angular.module('capsApp', [])
 
+capsApp.filter('reverse', function() {
+  return function(items) {
+    return items.slice().reverse()
+  }
+});
+
 capsApp.controller('MainCtrl', function($scope, $http) {
   $scope.give = {
     'peopleId': null,
     'capId': null,
     'reason': ''
   }
+  $scope.giveShown = false
 
   $http.get('data/people.json').success(onpeople)
   $http.get('data/caps.json').success(oncaps)
   
   $scope.setGiveItem = setGiveItem
   $scope.giveCap = giveCap
+  $scope.showGive = showGive
 
-  dev()
+ // dev()
 
   function dev() {
     $scope.give = {
@@ -40,10 +48,28 @@ capsApp.controller('MainCtrl', function($scope, $http) {
     _.extend($scope.give, data)
   }
 
+  function showGive() {
+    $scope.giveShown = true
+  }
+
   function giveCap() {
-    var d = $scope.give
-    if (d.peopleId == null || d.capId == null || !d.reason) return
-    console.log(d)
+    var give = $scope.give,
+      capTo = $scope.people[give.peopleId]
+    if (give.peopleId == null || give.capId == null || !give.reason) return
+    capTo.caps.push({
+      id: give.capId,
+      reason: give.reason
+    })
+
+
+    $http({
+      url: '/people',
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      data: $scope.people
+    })
+    console.log($scope.people)
+    $scope.giveShown = false
   }
 
 

@@ -16,14 +16,6 @@
       {
         "id": 1,
         "reason": "За бюджет"
-      },
-      {
-        "id": 3,
-        "reason": "За дизайн нового фаннела"
-      },
-      {
-        "id": 2,
-        "reason": "За просто так"
       }
     ]
   },
@@ -47,11 +39,19 @@
       },
       {
         "id": 1,
-        "reason": "За кепсы"
+        "reason": "Some reason"
       },
       {
-        "id": 3,
-        "reason": "Потому что неплохо дать Юрцу кепс"
+        "id": 1,
+        "reason": "Some reason"
+      },
+      {
+        "id": 1,
+        "reason": "Some reason"
+      },
+      {
+        "id": 1,
+        "reason": "Another reason"
       }
     ]
   },

@@ -9,13 +9,7 @@ var gulp = require('gulp'),
   gutil = require('gulp-util'),
   bower = require("gulp-bower-files"),
 
-  _ = {
-    public: './public/',
-    css: './public/css/',
-    styl: './public/styl/',
-    js: './public/js/',
-    pages: './pages/'
-  }
+  _ = require('config').path
 
 gulp.task('default', ['run', 'watch'])
 
