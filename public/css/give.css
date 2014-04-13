@@ -24,6 +24,7 @@
   border: 4px outset #1caeca;
 }
 .give-people-item-img {
+  border: 1px solid #fff;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -64,6 +65,7 @@
   border: 4px outset #1caeca;
 }
 .give-cap-item-img {
+  border: 1px solid #fff;
   width: 100%;
   height: 100%;
   border-radius: 50%;

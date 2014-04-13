@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="capsApp">
+<html lang="en" ng-app="app">
 <head>
   <meta charset="utf-8">
   <title>Caps project</title>
@@ -8,18 +8,34 @@
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
   <link rel="stylesheet" href="css/index.css"></link>
+  <link href='http://fonts.googleapis.com/css?family=Noto+Sans:400,700|Josefin+Sans:400,600,700|Julius+Sans+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
   
 </head>
 
 <body ng-controller="MainCtrl">
+  <div class="header">
+    <div class="header-links">
+    </div>
+    <div class="header-title">
+      Get Cap
+    </div>
+    <div class="header-description">
+      Team members reward system
+    </div>
+  </div>
   <div class="container">
-    <div class="btn-cap" ng-click="showGive()">Give a Cap</div>
-    <div class="give-a-cap clearfix" ng-show="giveShown">
+    <div class="btn-cap"
+      ng-click="showForm()"
+      ng-show="!formShown"
+      >
+      Give a Cap
+    </div>
+    <div class="give-a-cap clearfix" ng-show="formShown">
       <div class="give-people">
         <div class="give-people-item"
           ng-repeat="one in people"
           ng-class="{__active: $index == give.peopleId}"
-          ng-click="setGiveItem({peopleId: $index})"
+          ng-click="setFormItem({peopleId: $index})"
           >
           <img class="give-people-item-img" ng-src="{{one.photo}}" alt="{{one.name}}">
         </div>
@@ -27,7 +43,7 @@
       <div class="give-cap">
         <div class="give-cap-item"
           ng-class="{__active: $index == give.capId}"
-          ng-click="setGiveItem({capId: $index})"
+          ng-click="setFormItem({capId: $index})"
           ng-repeat="cap in caps"
           >
           <img class="give-cap-item-img" ng-src="{{caps[cap.id].img}}" alt="{{caps[cap.id].name" />
@@ -39,7 +55,7 @@
           ng-model="give.reason"
           name="reason"
           rows="3"
-          placeholder="This cap is given to .."
+          ng-attr-placeholder="{{give.placeholder}}"
           ></textarea>
       </div>
       <div class="give-submit">

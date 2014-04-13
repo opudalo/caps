@@ -1,22 +1,25 @@
-* {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
 body {
-  font-family: Helvetica, sans;
   background-color: #fcfcfc;
+  font-family: 'Noto Sans', sans-serif;
 }
 .container {
   width: 800px;
   margin: 0 auto;
 }
-.clearfixbefore,
-.clearfix:after {
-  content: " ";
-  display: table;
+.header {
+  background: #292929;
+  color: #fcfcfc;
+  text-align: center;
+  padding: 40px;
+  margin-bottom: 40px;
 }
-.clearfixafter {
-  clear: both;
+.header-title {
+  margin: 40px 0;
+  font-size: 64px;
+  font-family: 'Julius Sans One', sans-serif;
+}
+.header-description {
+  font-size: 32px;
 }
 .btn-cap {
   display: inline-block;
@@ -24,7 +27,6 @@ body {
   border: 1px solid #000;
   color: #fcfcfc;
   background: #292929;
-/* box-shadow inset 0 0 3px #fff */
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -38,6 +40,7 @@ body {
 .people {
   padding: 20px 0;
   display: table;
+  margin: 0 auto;
 }
 .people-avatar {
   width: 40px;
