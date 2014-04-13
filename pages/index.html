@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>Caps project</title>
   <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/lodash/dist/lodash.js"></script>
   <script src="js/app.js"></script>
   <script src="js/controllers.js"></script>
   <link rel="stylesheet" href="css/index.css"></link>
@@ -13,9 +14,40 @@
 <body ng-controller="MainCtrl">
   <div class="container">
     <div class="btn-cap" ng-click="">Give a Cap</div>
-    <div class="clearfix">
-      <div class="give-a-cap">
-        
+    <div class="give-a-cap clearfix">
+      <div class="give-people">
+        <div class="give-people-item"
+          ng-repeat="one in people"
+          ng-class="{__active: $index == give.peopleId}"
+          ng-click="setGiveItem({peopleId: $index})"
+          >
+          <img class="give-people-item-img" ng-src="{{one.photo}}" alt="{{one.name}}">
+        </div>
+      </div>
+      <div class="give-cap">
+        <div class="give-cap-item"
+          ng-class="{__active: $index == give.capId}"
+          ng-click="setGiveItem({capId: $index})"
+          ng-repeat="cap in caps"
+          >
+          <img class="give-cap-item-img" ng-src="{{caps[cap.id].img}}" alt="{{caps[cap.id].name" />
+        </div>
+      </div>
+      <div class="give-reason">
+        <div class="give-reason-header">Reason</div>
+        <textarea
+          ng-model="give.reason"
+          name="reason"
+          rows="3"
+          placeholder="This cap is given to .."
+          ></textarea>
+      </div>
+      <div class="give-submit">
+        <div class="btn-cap give-submit-btn"
+          ng-click="giveCap()"
+          >
+          Give
+        </div>
       </div>
     </div>
 

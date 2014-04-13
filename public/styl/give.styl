@@ -1,0 +1,43 @@
+.give-a-cap
+  border 1px solid
+
+item(w)
+  display flex
+  padding 20px
+
+  &-item
+    width w
+    height w
+    margin auto
+    border-radius 50%
+    border 4px solid transparent
+    c=#2cc5e2
+    &:hover
+      border 4px outset c
+    &:active, &.__active
+      border 4px outset darken(c, 15%)
+
+    &-img
+      width 100%
+      height 100%
+      border-radius 50%
+
+.give
+  &-people
+    item(120px)
+    &-item
+      opacity .85
+      &:hover, &:active, &.__active
+        opacity 1
+  &-cap
+    item(120px)
+
+  &-reason
+    padding 20px
+    textarea
+      width 100%
+      border none
+      resize none
+      outline none
+      font-size 16px
+      background inherit
