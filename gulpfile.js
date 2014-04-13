@@ -6,6 +6,7 @@ var gulp = require('gulp'),
   include = require('gulp-include'),
   livereload = require('gulp-livereload'),
   prefix = require('gulp-autoprefixer'),
+  gutil = require('gulp-util'),
   bower = require("gulp-bower-files"),
 
   _ = {
@@ -46,6 +47,7 @@ gulp.task('styl', function() {
       paths: [ _.styl ],
       import: ['nib']
     }))
+    .on('error', gutil.log)
     .pipe(prefix.apply(prefix, [ "last 2 versions"]))
     .pipe(gulp.dest( _.css ))
     .pipe(livereload())
