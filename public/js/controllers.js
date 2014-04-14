@@ -57,6 +57,7 @@ app.controller('MainCtrl', function($scope, $http) {
   $scope.give = {}
   $scope.setFormItem = setFormItem
   $scope.giveCap = giveCap
+  $scope.withdrawCap = withdrawCap
   $scope.showForm = showForm
 
   resetForm()
@@ -105,6 +106,9 @@ app.controller('MainCtrl', function($scope, $http) {
 
   function oncaps(data) {
     $scope.caps = data
+  }
+    
+  function withdrawCap(data) {
   }
     
   function setFormItem(data) {

@@ -82,6 +82,9 @@
         </div>
       </div>
       <div class="cap" ng-repeat="cap in one.caps | reverse">
+          <div class="cap-withdraw"
+            ng-click="widthdrawCap()"
+            >withdraw a cap</div>
           <div class="cap-item">
             <img ng-src="{{caps[cap.id].img}}" alt="{{caps[cap.id].name" />
           </div>
