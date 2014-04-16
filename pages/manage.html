@@ -55,7 +55,7 @@
       </form>
     </div>
 
-    <div class="cap" ng-repeat="cap in caps">
+    <div class="cap" ng-repeat="cap in caps | reverse">
         <div class="cap-item">
           {{cap.name}}
           <img ng-src="{{cap.frontImg}}" alt="{{cap.name}}" />

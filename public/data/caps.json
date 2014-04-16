@@ -1,1 +1,296 @@
-[]
+[
+  {
+    "id": "142d5d82-c4f8-8e83-591e-39d25772ba30",
+    "frontImg": "/img/caps/9e710810-09a4-a879-f962-9e323b43830d.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "MK3 Logo"
+  },
+  {
+    "id": "8c126dfc-0c7a-2024-b035-ca8504db7338",
+    "frontImg": "/img/caps/15439fd4-880a-5dc2-7628-cf511e4381e9.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Cyrax"
+  },
+  {
+    "id": "8a9679ae-d882-ea6e-5525-69df7505c148",
+    "frontImg": "/img/caps/18019b75-d55b-02e8-9b8e-688f38bb31a0.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Cyrax"
+  },
+  {
+    "id": "4f4b2959-f2ee-5fe1-9b4d-50ff313c1af4",
+    "frontImg": "/img/caps/e484fca0-8cac-38db-ce9a-18adc9dd0ea1.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Cyrax"
+  },
+  {
+    "id": "4cc8b343-7632-0a2e-c48f-542dfda53c2c",
+    "frontImg": "/img/caps/5f6af2e0-166b-8748-9cd8-907e5d79be74.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Kabal"
+  },
+  {
+    "id": "6143e796-ccfb-f28d-4c39-01c6bd219e8d",
+    "frontImg": "/img/caps/bf79394d-db80-6cb9-ef8c-55c507ec331f.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Kabal"
+  },
+  {
+    "id": "23d39771-42cf-14e9-eb77-6d1441a23fbd",
+    "frontImg": "/img/caps/bbefc8f3-b619-3b72-4b4f-5a8739ee7fac.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Kabal"
+  },
+  {
+    "id": "200a4918-ff58-ca47-83e2-6535bb54fb12",
+    "frontImg": "/img/caps/054ca95c-b46d-ca9d-2231-8e86b44e9b4c.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Kano"
+  },
+  {
+    "id": "33027e50-e0b4-971e-6b0a-1b3ccc36ddc4",
+    "frontImg": "/img/caps/5f4b5780-e17a-c77e-4352-a8f2cc7e06b8.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Kano"
+  },
+  {
+    "id": "d2eb95a2-4f87-a6bf-c3ba-45fd2987b1e8",
+    "frontImg": "/img/caps/5e56c5e9-0e9b-7589-f2c3-18720760d199.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Kano"
+  },
+  {
+    "id": "340cedc6-56b8-ec32-f0d5-6a80195df62c",
+    "frontImg": "/img/caps/d39714f3-b9ef-308e-a26d-1e4f154ef28a.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Kung Lao"
+  },
+  {
+    "id": "6064a4eb-d9d9-165c-0411-47afe4b0834c",
+    "frontImg": "/img/caps/16a77c23-d222-046e-c9ac-f457c3221dbb.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Kung Lao"
+  },
+  {
+    "id": "39c0d0cf-0d13-d2d4-3f89-52de944ca661",
+    "frontImg": "/img/caps/a14733ec-5393-680a-c1b7-0771ac63cbae.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Kung Lao"
+  },
+  {
+    "id": "1ab6e9c7-5a66-6826-1553-3caacf2228f3",
+    "frontImg": "/img/caps/10fc3b36-91e6-a8d8-90b1-9927874bbb21.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Liu Kang"
+  },
+  {
+    "id": "ba679ed4-fbdd-4fe4-d52d-d30a85ca66b8",
+    "frontImg": "/img/caps/02e2be98-f86d-e975-3813-a7c74130e020.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Liu Kang"
+  },
+  {
+    "id": "e8c6e914-51cf-220d-b0c4-099fa829e6c5",
+    "frontImg": "/img/caps/5ed74971-1d49-dd63-db62-9652703e4a32.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Liu Kang"
+  },
+  {
+    "id": "ce92f454-2a13-807f-3f52-62fd254df82e",
+    "frontImg": "/img/caps/8713a9a6-0f95-ecd7-d859-8a2909cdac86.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Motaro"
+  },
+  {
+    "id": "410b01ae-32c8-03cf-3626-a465714dcbf4",
+    "frontImg": "/img/caps/7ce96f3f-ac92-bc0c-d997-c7a6c18213a2.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Motaro"
+  },
+  {
+    "id": "4cf7cf76-9956-8fed-0695-edea3ba7d463",
+    "frontImg": "/img/caps/62d75d40-e523-bd95-b8fd-8ca8087a0fc4.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Motaro"
+  },
+  {
+    "id": "81818724-45fd-71da-6d1d-5497d2d1d68d",
+    "frontImg": "/img/caps/99d677ed-f301-7470-fca8-b42169a892e1.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sektor"
+  },
+  {
+    "id": "8808cb62-6e88-f1a3-fee5-fa8e97ae751f",
+    "frontImg": "/img/caps/5549bdde-090e-f67e-2f32-e0fc3b1d32cf.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sektor"
+  },
+  {
+    "id": "72893316-bf25-79fb-bebb-6aa591f09d5f",
+    "frontImg": "/img/caps/bab867ec-b6a6-d034-9ef2-3b9ef4981a8c.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sektor"
+  },
+  {
+    "id": "aa545d3b-5879-83c8-5eda-bc99859921f3",
+    "frontImg": "/img/caps/792c8deb-3b9c-72ec-ac59-c074762d2c0a.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Shang Tsung"
+  },
+  {
+    "id": "96c0df5f-5a5a-1e8b-866c-cad54157a5fe",
+    "frontImg": "/img/caps/5ab502f5-8a88-e03a-9c78-9d8c6d6132d6.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Shang Tsung"
+  },
+  {
+    "id": "860dd06b-587a-c796-f1e7-e9ce5485c6e7",
+    "frontImg": "/img/caps/01ce9d71-912d-1d47-df8b-c48b07167163.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Shang Tsung"
+  },
+  {
+    "id": "8ce59d67-94ef-f863-25e7-47b8826164d8",
+    "frontImg": "/img/caps/4fc00c7c-4711-443b-2ede-c68bcd5d3c79.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Shao Kahn"
+  },
+  {
+    "id": "82bef08d-ab0e-2dff-fd1a-a562692b6d07",
+    "frontImg": "/img/caps/fa4b6138-d53f-8f23-1df7-aa4988b9970b.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Shao Kahn"
+  },
+  {
+    "id": "9512a706-439d-e288-3fc9-9a910084c9c2",
+    "frontImg": "/img/caps/03be90f7-1981-c32a-74f5-cf306d811af5.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sheeva"
+  },
+  {
+    "id": "12d5198a-8d79-8d49-bcaa-bb0fc476577e",
+    "frontImg": "/img/caps/5d152c12-d0f2-8423-274e-f8f6040abd12.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sheeva"
+  },
+  {
+    "id": "c9b9d999-95ef-ff1a-60af-26c6dfd9ce21",
+    "frontImg": "/img/caps/b44036f8-2da2-836a-cfbc-c1f9204a8d0e.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sheeva"
+  },
+  {
+    "id": "a7c6edd4-7020-28ea-6869-8c0af5fea33a",
+    "frontImg": "/img/caps/dd6d7cf8-a2cb-9ec4-b4c0-c86c93060551.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sindel"
+  },
+  {
+    "id": "f1409499-f17e-acd2-b89d-9fec0d75e2cc",
+    "frontImg": "/img/caps/cd3aa5c6-6794-aa8d-5d7e-1ef2e619b4a8.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sindel"
+  },
+  {
+    "id": "195e6412-e56e-735d-f274-10e7e5feca1e",
+    "frontImg": "/img/caps/7f867a4e-6031-0f5c-1776-5a9fa70bd3ee.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sindel"
+  },
+  {
+    "id": "b215aed3-098b-8548-8fe1-ddf703b46d69",
+    "frontImg": "/img/caps/d7e84fe0-3c66-3742-9c68-f8602e2b9307.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sonya"
+  },
+  {
+    "id": "21add4b3-9811-4c74-0e5d-57bccd04c9c4",
+    "frontImg": "/img/caps/2aeb07b5-30b9-a391-c4b4-76bf1817bad9.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sonya"
+  },
+  {
+    "id": "f32f1326-a425-3613-2bab-3d68cf5e5523",
+    "frontImg": "/img/caps/97dbbb07-6729-5e06-3f0e-99265eb065db.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sonya"
+  },
+  {
+    "id": "d62a9991-16ff-7cee-6c25-b4cb8416d8c1",
+    "frontImg": "/img/caps/1322a2f0-c06d-7fe6-2a22-412bed221d23.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Stryker"
+  },
+  {
+    "id": "ddb329a9-68ef-d72f-18f0-7aa6bb18e6eb",
+    "frontImg": "/img/caps/5beca836-9da4-d434-7b5f-728fcfe74f7c.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Stryker"
+  },
+  {
+    "id": "7bf32067-2473-cf76-db95-cac4661c5b4e",
+    "frontImg": "/img/caps/abf8a272-93c6-9b7e-3e90-ac3be96d8e93.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Stryker"
+  },
+  {
+    "id": "91f6b30d-c268-2f0b-75c7-ec12adfa1b94",
+    "frontImg": "/img/caps/b5c33434-9042-8bbd-9ac4-5fda47b08d0b.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sub Zero"
+  },
+  {
+    "id": "3362a567-b984-f48a-9dbb-7d110c98c917",
+    "frontImg": "/img/caps/5952c9da-bbbf-9f1f-0956-6c465cff4510.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sub Zero"
+  },
+  {
+    "id": "d83565c1-9480-197e-8e9e-09c107ae695e",
+    "frontImg": "/img/caps/fc79d1ef-efe2-d7a2-dde5-724dae39f58f.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Sub Zero"
+  },
+  {
+    "id": "72513d69-9bb0-88af-e136-bbbe4c67668a",
+    "frontImg": "/img/caps/31500215-0a1b-f896-fbce-fe88b5ed6518.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Night Wolf"
+  },
+  {
+    "id": "e8d166b1-a7c5-d776-e482-a26bafe25f50",
+    "frontImg": "/img/caps/503509ad-bbe9-66d6-8132-ce06482b44ec.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Night Wolf"
+  },
+  {
+    "id": "59df9605-c21e-7313-941e-dbed7f495976",
+    "frontImg": "/img/caps/715dc20d-04a1-a44b-ca6a-507129a80c07.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Night Wolf"
+  },
+  {
+    "id": "a34a8f2c-809c-9b5e-ac7f-c3889e090b44",
+    "frontImg": "/img/caps/76b1af86-9a6e-cea4-b648-b10d40136010.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Jax"
+  },
+  {
+    "id": "ae196f68-fef2-3a73-f872-5f0ef1c3feb9",
+    "frontImg": "/img/caps/a40e9ccd-1c4a-b751-e5d1-7e4e12912da0.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Jax"
+  },
+  {
+    "id": "8b1e2a05-5200-4ef8-b4b2-35f0388068c7",
+    "frontImg": "/img/caps/b429b101-fef2-8871-9b61-4f49c9eb7667.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Jax"
+  },
+  {
+    "id": "5aa98b4d-b0ca-f6ee-bc1b-46e3b9cca617",
+    "frontImg": "/img/caps/e602709e-36a1-916c-9d28-bdf39ed2208a.png",
+    "backImg": "/img/caps/Back.png",
+    "name": "Mortal Kombat"
+  }
+]
