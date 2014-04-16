@@ -10,45 +10,6 @@ app.filter('reverse', function() {
   }
 })
 
-app.directive('ng-placeholder', function() {
-  return {
-    restrict: 'A',
-    require: 'ngModel',
-    link: function(scope, element, attr, ctrl) {      
-      
-      var value;
-      
-      var placehold = function () {
-          element.val(attr.placehold)
-      };
-      var unplacehold = function () {
-          element.val('');
-      };
-      
-      scope.$watch(attr.ngModel, function (val) {
-        value = val || '';
-      });
-
-      element.bind('focus', function () {
-         if(value == '') unplacehold();
-      });
-      
-      element.bind('blur', function () {
-         if (element.val() == '') placehold();
-      });
-      
-      ctrl.$formatters.unshift(function (val) {
-        if (!val) {
-          placehold();
-          value = '';
-          return attr.placehold;
-        }
-        return val;
-      });
-    }
-  };
-})
-
 app.controller('MainCtrl', function($scope, $http) {
 
   $http.get('data/people.json').success(onpeople)
@@ -64,6 +25,7 @@ app.controller('MainCtrl', function($scope, $http) {
  // dev()
 
   function dev() {
+    $scope.formShown = true
     $scope.give = {
       'peopleId': 1,
       'capId': 1,
@@ -145,6 +107,90 @@ app.controller('MainCtrl', function($scope, $http) {
     console.log($scope.people)
 
     hideForm()
+  }
+
+
+})
+
+app.directive('fileInput', [ '$parse', function($parse) {
+  return {
+    restrict: 'A',
+    link: function(scope, els, attr, ctrl) {
+      els.bind('change', function () {
+        var el = els[0],
+          files = el.files
+
+        if (!files || !files.length) return
+
+        $parse(attr.fileInput)
+          .assign(scope, files[0])
+
+        scope.$apply()
+      })
+    }
+  }
+}])
+
+app.controller('ManageCtrl', function($scope, $http) {
+
+  $http.get('data/people.json').success(onpeople)
+  $http.get('data/caps.json').success(oncaps)
+
+  // draw/edit/delete/add
+  
+  $scope.showForm = showForm
+  $scope.submitCap = submitCap
+
+  resetForm()
+  dev()
+
+  function dev() {
+    $scope.cap.name = 'adsfasfs'
+    $scope.formShown = true
+  }
+
+  function resetForm() {
+    $scope.cap = {
+      'name': '',
+      'frontImg': null,
+      'backImg': null
+    }
+    $scope.formShown = false
+  }
+
+  function onpeople(data) {
+    $scope.people = data
+  }
+
+  function oncaps(data) {
+    $scope.caps = data
+  }
+    
+  function showForm() {
+    $scope.formShown = true
+  }
+
+  function hideForm() {
+    resetForm()
+  }
+
+  function submitCap() {
+    var data = new FormData(),
+      cap = $scope.cap
+
+    angular.forEach(cap, function(value, key) {
+      data.append(key, value);
+    });
+
+    $http.post('/add', data, {
+      transformRequest: angular.identity,
+      headers: { 'Content-Type': undefined }
+    }).success(function (msg) {
+      if (!msg.ok) return 
+
+      $scope.caps.push(msg.cap)
+    })
+
   }
 
 

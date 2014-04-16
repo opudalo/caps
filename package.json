@@ -18,7 +18,9 @@
     "koa-rewrite": "^1.1.0",
     "underscore": "^1.6.0",
     "koa-stylus": "0.0.3",
-    "co-body": "0.0.1"
+    "co-body": "0.0.1",
+    "co-busboy": "^1.0.2",
+    "koa-logger": "^1.2.0"
   },
   "devDependencies": {
     "gulp": "^3.5.6",
