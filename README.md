@@ -4,10 +4,12 @@
 
 **MUST**
 - give-a-cap form re-design
+- CRUD json module
 - manage people/caps page (/manage ?)
+- re-structure index page
+- add 'given' indicator to the cap
 - delete/edit given caps
 - give-a-cap active only caps that are free, and that no-on use yet
-- data format re-think
 - deploy
 
 **SHOULD**
@@ -22,3 +24,7 @@
 - localization  EN/RU/UA
 - XSS handling
 - github hooks to commit server file changes
+
+
+**DONE**
+- data format re-think
