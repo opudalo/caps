@@ -10,7 +10,10 @@ var koa = require('koa'),
 
   _ = require('config').path
 
-var app = koa()
+  
+
+var app = koa(),
+  capModel = require('model/caps')(app)
 
 app.use(logger())
 
@@ -24,17 +27,7 @@ app.use(stylus('./public'))
 app.use(route.get('/', index))
 app.use(route.get('/manage', manage))
 app.use(route.post('/people', people))
-app.use(route.post('/add', cap))
-
-function guid() {
-  function s4() {
-    return Math.floor((1 + Math.random()) * 0x10000)
-               .toString(16)
-               .substring(1);
-  }
-  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-         s4() + '-' + s4() + s4() + s4();
-}
+app.use(route.post('/add', capModel.add))
 
 function *people() {
   var data = yield body.json(this),
