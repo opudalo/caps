@@ -6,8 +6,8 @@ var app = angular.module('app', [])
 
 app.filter('reverse', function() {
   return function(items) {
-    if (!items || !items.length) return 
-    return items.slice().reverse()
+    if (!items) return 
+    return _.sortBy(items,'timestamp').reverse()
   }
 })
 
