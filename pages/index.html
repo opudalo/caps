@@ -12,7 +12,7 @@
   
 </head>
 
-<body ng-controller="MainCtrl">
+<body ng-controller="MainCtrl" class="page-people">
   <div class="header">
     <div class="header-links">
     </div>
@@ -42,11 +42,11 @@
       </div>
       <div class="give-cap">
         <div class="give-cap-item"
-          ng-class="{__active: $index == give.capId}"
-          ng-click="setFormItem({capId: $index})"
+          ng-class="{__active: cap.id == give.capId}"
+          ng-click="setFormItem({capId: cap.id})"
           ng-repeat="cap in caps"
           >
-          <img class="give-cap-item-img" ng-src="{{caps[cap.id].img}}" alt="{{caps[cap.id].name" />
+          <img class="give-cap-item-img" ng-src="{{cap.frontImg}}" alt="{{cap.name" />
         </div>
       </div>
       <div class="give-reason">
@@ -82,11 +82,11 @@
         </div>
       </div>
       <div class="cap" ng-repeat="cap in one.caps | reverse">
-          <div class="cap-withdraw"
+          <div style="display: none" class="cap-withdraw"
             ng-click="widthdrawCap()"
             >withdraw a cap</div>
           <div class="cap-item">
-            <img ng-src="{{caps[cap.id].img}}" alt="{{caps[cap.id].name" />
+            <img ng-src="{{caps[cap.id].frontImg}}" alt="{{caps[cap.id].name" />
           </div>
           <div class="cap-reason">
             {{cap.reason}}

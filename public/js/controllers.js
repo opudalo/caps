@@ -23,13 +23,13 @@ app.controller('MainCtrl', function($scope, $http) {
   $scope.showForm = showForm
 
   resetForm()
- // dev()
+  //dev()
 
   function dev() {
     $scope.formShown = true
     $scope.give = {
       'peopleId': 1,
-      'capId': 1,
+      //'capId': 1,
       'reason': 'Some reason'
     }
   }
@@ -91,21 +91,25 @@ app.controller('MainCtrl', function($scope, $http) {
 
   function giveCap() {
     var give = $scope.give,
-      capTo = $scope.people[give.peopleId]
+      person = $scope.people[give.peopleId]
     if (give.peopleId == null || give.capId == null || !give.reason) return
-    capTo.caps.push({
+    person.caps.push({
       id: give.capId,
       reason: give.reason
     })
 
+    $scope.caps[give.capId].owned = true
 
-    $http({
-      url: '/people',
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      data: $scope.people
-    })
-    console.log($scope.people)
+
+    $http.put('/people', {
+        people: $scope.people,
+        capId: give.capId
+      }, {
+        headers: { 'Content-Type': 'application/json' },
+      }).success(function(msg) {
+        if (!msg.ok) return false
+        console.log('cap is given to some guy')
+      })
 
     hideForm()
   }
@@ -201,9 +205,6 @@ app.controller('ManageCtrl', function($scope, $http) {
     }).success(function (msg) {
       if (!msg.ok || !msg.cap) return 
       $scope.caps[msg.cap.id] = msg.cap
-      console.log('>>>', $scope.caps)
-      console.log('<<<', msg.cap)
-
     })
 
   }

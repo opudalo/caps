@@ -12,14 +12,14 @@ var path = require('../config').path,
 
 module.exports = function (app) {
   return {
-    all: all,
+    get: get,
     add: add,
     del: del
   }
 }
 
-function *all() {
-  var caps = db.get(capsdb)
+function *get(id) {
+  var caps = db.get(capsdb, id)
 
   this.body = {ok: true, caps: caps}
 }

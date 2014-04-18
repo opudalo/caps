@@ -30,15 +30,20 @@ app.use(stylus('./public'))
 app.use(route.get('/', index))
 app.use(route.get('/manage', manage))
 
-app.use(route.post('/people', people))
+app.use(route.put('/people', people))
 app.use(route.post('/caps', capModel.add))
 app.use(route.delete('/caps/:id', capModel.del))
 
 function *people() {
   var data = yield body.json(this),
     file = 'people.json'
+  console.log(data.people)
+  //writeToFile(_.data + file, data.people)
 
-  writeToFile(_.data + file, data)
+ // var cap = capModel.get(data.capId)
+ // console.log(this.body, cap)
+
+
 }
 
 function writeToFile(file, data){

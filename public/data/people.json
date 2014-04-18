@@ -4,131 +4,34 @@
     "title": "Designer",
     "photo": "/img/pic/yuraT.png",
     "started": "2/14/2012",
-    "caps": [
-      {
-        "id": 0,
-        "reason": "За заслуги перед отечеством"
-      },
-      {
-        "id": 1,
-        "reason": "За колено"
-      },
-      {
-        "id": 1,
-        "reason": "За бюджет"
-      },
-      {
-        "id": 3,
-        "reason": "За дизайн нового фаннела"
-      },
-      {
-        "id": 2,
-        "reason": "За просто так"
-      },
-      {
-        "id": 0,
-        "reason": "Ну бери"
-      },
-      {
-        "id": 0,
-        "reason": "л аівлад овадлві а"
-      }
-    ]
+    "caps": []
   },
   {
     "name": "Zhenya Chechurin",
     "title": "Front-end Developer",
     "photo": "/img/pic/zhenjaX.png",
     "started": "3/20/2013",
-    "caps": [
-      {
-        "id": 1,
-        "reason": "За заслуги перед отечеством"
-      },
-      {
-        "id": 3,
-        "reason": "За колено"
-      },
-      {
-        "id": 2,
-        "reason": "За бюджет"
-      },
-      {
-        "id": 1,
-        "reason": "За кепсы"
-      },
-      {
-        "id": 3,
-        "reason": "Потому что неплохо дать Юрцу кепс"
-      },
-      {
-        "id": 0,
-        "reason": "іва"
-      },
-      {
-        "id": 2,
-        "reason": "іва!!!"
-      }
-    ]
+    "caps": []
   },
   {
     "name": "Igor Kononuchenko",
     "title": "Team Lead",
     "photo": "img/pic/igorK-30.png",
     "started": "1/29/2011",
-    "caps": [
-      {
-        "id": 0,
-        "reason": "За заслуги перед отечеством"
-      },
-      {
-        "id": 3,
-        "reason": "За колено"
-      },
-      {
-        "id": 1,
-        "reason": "За бюджет"
-      }
-    ]
+    "caps": []
   },
   {
     "name": "Yuriy Bogdanov",
     "title": "Software Developer, Erlang",
     "photo": "/img/pic/yuraB.png",
     "started": "3/12/2013",
-    "caps": [
-      {
-        "id": 3,
-        "reason": "За заслуги перед отечеством"
-      },
-      {
-        "id": 0,
-        "reason": "За колено"
-      },
-      {
-        "id": 2,
-        "reason": "За бюджет"
-      }
-    ]
+    "caps": []
   },
   {
     "name": "Dima Fillipenko",
     "title": "Front-end Developer",
     "photo": "img/pic/fil.png",
     "started": "12/18/2013",
-    "caps": [
-      {
-        "id": 1,
-        "reason": "За заслуги перед отечеством"
-      },
-      {
-        "id": 2,
-        "reason": "За колено"
-      },
-      {
-        "id": 3,
-        "reason": "За бюджет"
-      }
-    ]
+    "caps": []
   }
 ]
