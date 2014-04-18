@@ -12,7 +12,7 @@
   
 </head>
 
-<body ng-controller="ManageCtrl">
+<body ng-controller="ManageCtrl" class="page-manage">
   <div class="header">
     <div class="header-links">
     </div>
@@ -54,12 +54,25 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-
-    <div class="cap" ng-repeat="cap in caps | reverse">
-        <div class="cap-item">
-          {{cap.name}}
-          <img ng-src="/img/caps/{{cap.frontImg}}" alt="{{cap.name}}" />
-        </div>
+    <div class="cap-list">
+      <div class="cap" ng-repeat="cap in caps | reverse">
+          <div class="cap-item">
+            <img ng-src="{{cap.frontImg}}" alt="{{cap.name}}" class="cap-item-img"/>
+            <div class="cap-item-ctrl">
+              <span class="cap-item-ctrl-item">
+                Edit
+              </span>
+              <span class="cap-item-ctrl-item"
+                ng-click="deleteCap(cap.id)"
+              >
+                Delete
+              </span>
+            </div>
+          </div>
+          <div class="cap-name">
+            {{cap.name}}
+          </div>
+      </div>
     </div>
   </div>
 </body>

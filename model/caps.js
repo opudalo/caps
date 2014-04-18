@@ -1,9 +1,11 @@
 var parse = require('co-busboy'),
+  body = require('co-body'),
   db = require('./jsondb'),
   fs = require('fs')
 
 
 var path = require('../config').path,
+  
   capsdb = path.data + 'caps.json',
   capsImg = path.img + 'caps/'
 
@@ -11,16 +13,27 @@ var path = require('../config').path,
 module.exports = function (app) {
   return {
     all: all,
-    add: add
+    add: add,
+    del: del
   }
 }
 
 function *all() {
-  
+  var caps = db.get(capsdb)
+
+  this.body = {ok: true, caps: caps}
 }
 
-function *del() {
+function *del(id) {
+  var cap = db.get(capsdb, id)
+  
+  remove(path.public + cap.frontImg)
+  remove(path.public + cap.backImg)
 
+  db.del(capsdb, id)
+  console.log('cap deleted', id)
+  
+  this.body = {ok: true}
 }
 
 function *add() {
@@ -34,8 +47,8 @@ function *add() {
 
   cap[id] = {
     id: id,
-    frontImg: '',
-    backImg: '',
+    frontImg: 'img/caps/',
+    backImg: 'img/caps/',
     name: '',
     timestamp: Date.now()
   }
@@ -53,6 +66,11 @@ function *add() {
   console.log('cap created: ', cap)
 
   this.body = {ok : true, cap: cap}
+}
+
+function remove(file) {
+  fs.unlinkSync(file)
+  console.log('successfully deleted ', file);
 }
 
 function upload(dest, file) {

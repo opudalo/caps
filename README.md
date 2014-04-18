@@ -4,7 +4,6 @@
 
 **MUST**
 - give-a-cap form re-design
-- CRUD json module
 - manage people/caps page (/manage ?)
 - re-structure index page
 - add 'given' indicator to the cap
@@ -28,3 +27,4 @@
 
 **DONE**
 - data format re-think
+- CRUD json module

@@ -141,9 +141,10 @@ app.controller('ManageCtrl', function($scope, $http) {
   
   $scope.showForm = showForm
   $scope.submitCap = submitCap
+  $scope.deleteCap = deleteCap
 
   resetForm()
-  dev()
+  //dev()
 
   function dev() {
     $scope.cap.name = 'adsfasfs'
@@ -175,21 +176,34 @@ app.controller('ManageCtrl', function($scope, $http) {
     resetForm()
   }
 
+  function deleteCap(id) {
+    var id = id,
+      delCap = _.clone($scope.caps[id])
+    console.log(delCap)
+    $http.delete('/caps/' + id).success(function (msg) {
+      if (!msg.ok) return 
+      
+      delete $scope.caps[id]
+    })
+  }
+
   function submitCap() {
     var data = new FormData(),
       cap = $scope.cap
 
     angular.forEach(cap, function(value, key) {
-      data.append(key, value);
-    });
+      data.append(key, value)
+    })
 
-    $http.post('/add', data, {
+    $http.post('/caps', data, {
       transformRequest: angular.identity,
       headers: { 'Content-Type': undefined }
     }).success(function (msg) {
-      if (!msg.ok) return 
+      if (!msg.ok || !msg.cap) return 
+      $scope.caps[msg.cap.id] = msg.cap
+      console.log('>>>', $scope.caps)
+      console.log('<<<', msg.cap)
 
-      $scope.caps.push(msg.cap)
     })
 
   }

@@ -1,7 +1,7 @@
-.give-a-cap {
+.page-people .give-a-cap {
   border: 1px solid;
 }
-.give-people {
+.page-people .give-people {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -9,40 +9,40 @@
   display: flex;
   padding: 20px;
 }
-.give-people-item {
+.page-people .give-people-item {
   width: 120px;
   height: 120px;
   margin: auto;
   border-radius: 50%;
   border: 4px solid transparent;
 }
-.give-people-item:hover {
+.page-people .give-people-item:hover {
   border: 4px outset #2cc5e2;
 }
-.give-people-item:active,
-.give-people-item.__active {
+.page-people .give-people-item:active,
+.page-people .give-people-item.__active {
   border: 4px outset #1caeca;
 }
-.give-people-item-img {
+.page-people .give-people-item-img {
   border: 1px solid #fff;
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-.give-people-item {
+.page-people .give-people-item {
   opacity: 0.85;
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
   filter: alpha(opacity=85);
 }
-.give-people-item:hover,
-.give-people-item:active,
-.give-people-item.__active {
+.page-people .give-people-item:hover,
+.page-people .give-people-item:active,
+.page-people .give-people-item.__active {
   opacity: 1;
   -ms-filter: none;
   -webkit-filter: none;
   filter: none;
 }
-.give-cap {
+.page-people .give-cap {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,35 +50,35 @@
   display: flex;
   padding: 20px;
 }
-.give-cap-item {
+.page-people .give-cap-item {
   width: 120px;
   height: 120px;
   margin: auto;
   border-radius: 50%;
   border: 4px solid transparent;
 }
-.give-cap-item:hover {
+.page-people .give-cap-item:hover {
   border: 4px outset #2cc5e2;
 }
-.give-cap-item:active,
-.give-cap-item.__active {
+.page-people .give-cap-item:active,
+.page-people .give-cap-item.__active {
   border: 4px outset #1caeca;
 }
-.give-cap-item-img {
+.page-people .give-cap-item-img {
   border: 1px solid #fff;
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-.give-reason {
+.page-people .give-reason {
   padding: 20px;
 }
-.give-reason-header,
-.give-reason textarea {
+.page-people .give-reason-header,
+.page-people .give-reason textarea {
   width: 60%;
   margin: 0 20%;
 }
-.give-reason textarea {
+.page-people .give-reason textarea {
   border: none;
   resize: none;
   outline: none;

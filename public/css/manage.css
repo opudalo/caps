@@ -1,0 +1,84 @@
+.page-manage .cap-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -o-box-orient: horizontal;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.page-manage .cap {
+  width: 20%;
+  padding: 20px;
+}
+.page-manage .cap-item {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  border-radius: 50%;
+  border: 4px solid transparent;
+}
+.page-manage .cap-item:hover {
+  border: 4px outset #2cc5e2;
+}
+.page-manage .cap-item:hover .cap-item-ctrl {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+.page-manage .cap-item:hover ~ .cap-name {
+  color: #000;
+}
+.page-manage .cap-item:active,
+.page-manage .cap-item.__active {
+  border: 4px outset #1caeca;
+}
+.page-manage .cap-item-img {
+  border: 1px solid #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.page-manage .cap-item-ctrl {
+  position: absolute;
+  display: none;
+  -webkit-box-orient: vertical;
+  -o-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 25px 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.8);
+  color: #2cc5e2;
+  cursor: pointer;
+}
+.page-manage .cap-item-ctrl-item {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin: auto;
+  padding: 5px;
+}
+.page-manage .cap-item-ctrl-item:hover {
+  color: #f00;
+}
+.page-manage .cap-name {
+  padding-top: 5px;
+  text-align: center;
+  cursor: default;
+}
