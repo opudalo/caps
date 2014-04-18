@@ -19,6 +19,10 @@ function *all() {
   
 }
 
+function *del() {
+
+}
+
 function *add() {
   var parts = parse(this, {
       autoFields: true
@@ -30,8 +34,8 @@ function *add() {
 
   cap[id] = {
     id: id,
-    frontImg: '/img/caps/',
-    backImg: '/img/caps/',
+    frontImg: '',
+    backImg: '',
     name: '',
     timestamp: Date.now()
   }

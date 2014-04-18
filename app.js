@@ -36,41 +36,6 @@ function *people() {
   writeToFile(_.data + file, data)
 }
 
-function *cap() {
-  // multipart upload
-  var parts = parse(this, {
-      autoFields: true
-    }),
-    part,
-
-    dir = _.img + 'caps/',
-    cap = {
-      id: guid(),
-      frontImg: '/img/caps/',
-      backImg: '/img/caps/',
-      name: ''
-    }
-
-  while (part = yield parts) {
-    var filename = guid() + '.' + part.mimeType.replace(/.*?\//,''),
-      path = dir + filename
-    
-    cap[part.fieldname] += filename
-    
-    stream = fs.createWriteStream(path)
-    part.pipe(stream);
-    console.log('uploading %s -> %s', part.filename, stream.path);
-  }
-
-
-  cap.name = parts.field.name
-  console.log('cap object created: ', cap)
-  
-  appendToFile( _.data + 'caps.json', cap )
-  
-  this.body = {ok : true, cap: cap}
-}
-
 function appendToFile( file, cap) {
   fs.readFile(file, 'utf8', onRead)
 
