@@ -37,8 +37,8 @@ app.use(route.delete('/caps/:id', capModel.del))
 function *people() {
   var data = yield body.json(this),
     file = 'people.json'
-  console.log(data.people)
-  //writeToFile(_.data + file, data.people)
+  
+  writeToFile(_.data + file, data.people)
 
  // var cap = capModel.get(data.capId)
  // console.log(this.body, cap)
