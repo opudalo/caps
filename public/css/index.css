@@ -415,8 +415,8 @@ body {
   padding: 20px;
   max-height: 300px;
   overflow: auto;
-  background: -webkit-linear-gradient(#fcfcfc 30%, rgba(252,252,252,0)), -webkit-linear-gradient(rgba(252,252,252,0), #fcfcfc 70%) 0 100%, -webkit-linear-gradient(#1d1d1d 2%, rgba(252,252,252,0) 3%, rgba(252,252,252,0) 97%, #1d1d1d 98%);
-  background: linear-gradient(#fcfcfc 30%, rgba(252,252,252,0)), linear-gradient(rgba(252,252,252,0), #fcfcfc 70%) 0 100%, linear-gradient(#1d1d1d 2%, rgba(252,252,252,0) 3%, rgba(252,252,252,0) 97%, #1d1d1d 98%);
+  background: -webkit-linear-gradient(#fcfcfc 30%, #fcfcfc), -webkit-linear-gradient(#fcfcfc, #fcfcfc 70%) 0 100%, -webkit-linear-gradient(#1d1d1d 2%, rgba(252,252,252,0) 3%, rgba(252,252,252,0) 97%, #1d1d1d 98%);
+  background: linear-gradient(#fcfcfc 30%, #fcfcfc), linear-gradient(#fcfcfc, #fcfcfc 70%) 0 100%, linear-gradient(#1d1d1d 2%, rgba(252,252,252,0) 3%, rgba(252,252,252,0) 97%, #1d1d1d 98%);
   background-size: 100% 25px, 100% 25px, 100% 100%;
   background-repeat: no-repeat;
   background-attachment: local, local, scroll;
