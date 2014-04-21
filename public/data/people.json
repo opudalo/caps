@@ -11,7 +11,12 @@
     "title": "Front-end Developer",
     "photo": "/img/pic/zhenjaX.png",
     "started": "3/20/2013",
-    "caps": []
+    "caps": [
+      {
+        "id": "8a9679ae-d882-ea6e-5525-69df7505c148",
+        "reason": "hjk jkhkjhkjh kjh kj kj"
+      }
+    ]
   },
   {
     "name": "Igor Kononuchenko",

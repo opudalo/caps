@@ -34,6 +34,15 @@
           opacity 1
     &-cap
       item(120px)
+      max-height 300px
+      overflow auto
+      background linear-gradient(#fcfcfc 30%, rgba(#fcfcfc, 0)),
+        linear-gradient(rgba(#fcfcfc, 0), #fcfcfc 70%) 0 100%,
+        linear-gradient(#1d1d1d 2%, rgba(#fcfcfc, 0) 3%, rgba(#fcfcfc, 0) 97%, #1d1d1d 98%)
+      background-size 100% 25px, 100% 25px, 100% 100%
+      background-repeat no-repeat
+    
+      background-attachment local, local, scroll
 
     &-reason
       padding 20px
