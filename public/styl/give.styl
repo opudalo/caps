@@ -1,6 +1,4 @@
 .page-people
-  .give-a-cap
-    border 1px solid
 
   item(w, m)
     display flex
@@ -27,6 +25,32 @@
         float left
 
   .give
+    &-a-cap-wrap
+      background rgba(#fcfcfc, .3)
+      width 100%
+      height 100vh
+      position fixed
+      top 0
+      left 0
+      z-index 1
+      overflow scroll
+
+    &-a-cap
+      position relative
+      width 44%
+      margin 3% auto
+      padding-top 30px
+      border 1px solid
+      background #fcfcfc
+      box-shadow 0 10px 140px #000
+      &-close
+        btn()
+        position absolute
+        top 0
+        right 0 
+        width 30px
+        height 30px
+        line-height 24px
     &-people
       item(18%, 1%)
       &-item
@@ -39,7 +63,7 @@
       overflow auto
       background linear-gradient(#fcfcfc 30%, #fcfcfc),
         linear-gradient(#fcfcfc, #fcfcfc 70%) 0 100%,
-        linear-gradient(#1d1d1d 2%, rgba(#fcfcfc, 0) 3%, rgba(#fcfcfc, 0) 97%, #1d1d1d 98%)
+        linear-gradient(#1d1d1d 3%, rgba(#fcfcfc, 0) 3%, rgba(#fcfcfc, 0) 98%, #1d1d1d 98%)
       background-size 100% 25px, 100% 25px, 100% 100%
       background-repeat no-repeat
     

@@ -12,7 +12,11 @@
   
 </head>
 
-<body ng-controller="MainCtrl" class="page-people">
+<body 
+  ng-controller="MainCtrl"
+  class="page-people"
+  ng-class="{__noscroll: formShown}"
+>
   <div class="header">
     <div class="header-links">
     </div>
@@ -30,39 +34,45 @@
       >
       Give a Cap
     </div>
-    <div class="give-a-cap clearfix" ng-show="formShown">
-      <div class="give-people">
-        <div class="give-people-item"
-          ng-repeat="one in people"
-          ng-class="{__active: $index == give.peopleId}"
-          ng-click="setFormItem({peopleId: $index})"
-          >
-          <img class="give-people-item-img" ng-src="{{one.photo}}" alt="{{one.name}}">
+    <div class="give-a-cap-wrap" 
+      ng-show="formShown"
+      ng-click="hideForm()"
+      >
+      <div class="give-a-cap clearfix">
+        <div class="give-a-cap-close" ng-click="hideForm()">_</div>
+        <div class="give-people">
+          <div class="give-people-item"
+            ng-repeat="one in people"
+            ng-class="{__active: $index == give.peopleId}"
+            ng-click="setFormItem({peopleId: $index})"
+            >
+            <img class="give-people-item-img" ng-src="{{one.photo}}" alt="{{one.name}}">
+          </div>
         </div>
-      </div>
-      <div class="give-cap">
-        <div class="give-cap-item"
-          ng-class="{__active: cap.id == give.capId}"
-          ng-click="setFormItem({capId: cap.id})"
-          ng-repeat="cap in caps"
-          >
-          <img class="give-cap-item-img" ng-src="{{cap.frontImg}}" alt="{{cap.name" />
+        <div class="give-cap">
+          <div class="give-cap-item"
+            ng-class="{__active: cap.id == give.capId}"
+            ng-click="setFormItem({capId: cap.id})"
+            ng-repeat="cap in caps"
+            >
+            <img class="give-cap-item-img" ng-src="{{cap.frontImg}}" alt="{{cap.name" />
+          </div>
         </div>
-      </div>
-      <div class="give-reason">
-        <div class="give-reason-header">Reason</div>
-        <textarea
-          ng-model="give.reason"
-          name="reason"
-          rows="3"
-          ng-attr-placeholder="{{give.placeholder}}"
-          ></textarea>
-      </div>
-      <div class="give-submit">
-        <div class="btn-cap give-submit-btn"
-          ng-click="giveCap()"
-          >
-          Give
+        <div class="give-reason">
+          <div class="give-reason-header">Reason</div>
+          <textarea
+            ng-model="give.reason"
+            name="reason"
+            rows="3"
+            ng-attr-placeholder="{{give.placeholder}}"
+            ></textarea>
+        </div>
+        <div class="give-submit">
+          <div class="btn-cap give-submit-btn"
+            ng-click="giveCap()"
+            >
+            Give
+          </div>
         </div>
       </div>
     </div>

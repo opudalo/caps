@@ -21,6 +21,7 @@ app.controller('MainCtrl', function($scope, $http) {
   $scope.giveCap = giveCap
   $scope.withdrawCap = withdrawCap
   $scope.showForm = showForm
+  $scope.hideForm = hideForm
 
   resetForm()
   //dev()
