@@ -3,9 +3,6 @@
 ## TODO
 
 **MUST**
-- give-a-cap form re-design
-- manage people/caps page (/manage ?)
-- re-structure index page
 - add 'given' indicator to the cap
 - delete/edit given caps
 - give-a-cap active only caps that are free, and that no-on use yet
@@ -26,5 +23,8 @@
 
 
 **DONE**
+- manage people/caps page (/manage ?)
+- re-structure index page
+- give-a-cap form re-design
 - data format re-think
 - CRUD json module
