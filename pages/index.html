@@ -38,7 +38,7 @@
       ng-show="formShown"
       ng-click="hideForm()"
       >
-      <div class="give-a-cap clearfix">
+      <div class="give-a-cap clearfix" ng-click="$event.stopPropagation()">
         <div class="give-a-cap-close" ng-click="hideForm()">_</div>
         <div class="give-people">
           <div class="give-people-item"
