@@ -2,15 +2,15 @@
   .give-a-cap
     border 1px solid
 
-  item(w)
+  item(w, m)
     display flex
     flex-flow row wrap
-    padding 20px
+    padding 3%
 
     &-item
       width w
-      height w
-      margin auto
+      height auto
+      margin m 
       border-radius 50%
       border 4px solid transparent
       c=#2cc5e2
@@ -24,16 +24,17 @@
         width 100%
         height 100%
         border-radius 50%
+        float left
 
   .give
     &-people
-      item(120px)
+      item(18%, 1%)
       &-item
         opacity .85
         &:hover, &:active, &.__active
           opacity 1
     &-cap
-      item(120px)
+      item(18%, 1%)
       max-height 300px
       overflow auto
       background linear-gradient(#fcfcfc 30%, #fcfcfc),
