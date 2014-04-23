@@ -28,7 +28,10 @@ function *del(id) {
   var cap = db.get(capsdb, id)
   
   util.remove(path.public + cap.frontImg)
-  util.remove(path.public + cap.backImg)
+  
+  // Temporary backImg can not be removed 
+  // it's the same for all caps
+  //util.remove(path.public + cap.backImg)
 
   db.del(capsdb, id)
   console.log('cap deleted', id)
