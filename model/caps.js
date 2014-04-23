@@ -1,7 +1,7 @@
 var parse = require('co-busboy'),
   body = require('co-body'),
   db = require('./jsondb'),
-  fs = require('fs')
+  util = require('../util')
 
 
 var path = require('../config').path,
@@ -27,8 +27,8 @@ function *get(id) {
 function *del(id) {
   var cap = db.get(capsdb, id)
   
-  remove(path.public + cap.frontImg)
-  remove(path.public + cap.backImg)
+  util.remove(path.public + cap.frontImg)
+  util.remove(path.public + cap.backImg)
 
   db.del(capsdb, id)
   console.log('cap deleted', id)
@@ -42,7 +42,7 @@ function *add() {
     }),
     part,
     
-    id = guid(),
+    id = util.guid(),
     cap = {}
 
   cap[id] = {
@@ -54,8 +54,8 @@ function *add() {
   }
 
   while (part = yield parts) {
-    var filename = guid() + '.' + part.mimeType.replace(/.*?\//,'')
-    upload(capsImg + filename, part)
+    var filename = util.guid() + '.' + part.mimeType.replace(/.*?\//,'')
+    util.upload(capsImg + filename, part)
     
     cap[id][part.fieldname] += filename
   }
@@ -66,26 +66,5 @@ function *add() {
   console.log('cap created: ', cap)
 
   this.body = {ok : true, cap: cap}
-}
-
-function remove(file) {
-  fs.unlinkSync(file)
-  console.log('successfully deleted ', file);
-}
-
-function upload(dest, file) {
-  var stream = fs.createWriteStream(dest)
-
-  file.pipe(stream)
-  console.log('uploading %s -> %s', file.filename, stream.path)
-}
-
-function guid() {
-  function s4() {
-    return Math.floor((1 + Math.random()) * 0x10000)
-      .toString(16).substring(1)
-  }
-  return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-    s4() + '-' + s4() + s4() + s4();
 }
 
