@@ -51,7 +51,10 @@
         </div>
         <div class="give-cap">
           <div class="give-cap-item"
-            ng-class="{__active: cap.id == give.capId}"
+            ng-class="{
+              __active: cap.id == give.capId,
+              __owned: cap.owned
+            }"
             ng-click="setFormItem({capId: cap.id})"
             ng-repeat="cap in caps"
             >
