@@ -3,9 +3,7 @@
 ## TODO
 
 **MUST**
-- add 'given' indicator to the cap
 - delete/edit given caps
-- give-a-cap active only caps that are free, and that no-on use yet
 - deploy
 
 **SHOULD**
@@ -24,6 +22,8 @@
 
 **DONE**
 - manage people/caps page (/manage ?)
+- add 'given' indicator to the cap
+- give-a-cap active only caps that are free, and that no-on use yet
 - re-structure index page
 - give-a-cap form re-design
 - data format re-think
