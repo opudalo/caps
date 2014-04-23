@@ -8,12 +8,14 @@ var koa = require('koa'),
   logger = require('koa-logger'),
   parse = require('co-busboy'),
 
-  _ = require('config').path
+  _ = require('config').path,
+  util = require('./util')
 
   
 
 var app = koa(),
-  capModel = require('model/caps')(app)
+  capModel = require('model/caps')(app),
+  peopleModel = require('model/people')(app)
 
 app.use(logger())
 
@@ -31,18 +33,26 @@ app.use(route.get('/', index))
 app.use(route.get('/manage', manage))
 
 app.use(route.put('/people', people))
+app.use(route.post('/give', give))
 app.use(route.post('/caps', capModel.add))
 app.use(route.delete('/caps/:id', capModel.del))
 
+function *give() {
+  var data = yield body.json(this),
+    cap = data.cap,
+    people = data.people
+
+  yield capModel.update(cap.id, cap)
+  yield peopleModel.update(people.id, people)
+
+} 
 function *people() {
   var data = yield body.json(this),
     file = 'people.json'
   
+
+  
   writeToFile(_.data + file, data.people)
-
- // var cap = capModel.get(data.capId)
- // console.log(this.body, cap)
-
 
 }
 

@@ -1,42 +1,42 @@
-[
-  {
+{
+  "b91637fc-4e1a-a3a4-a7da-1ca331e61988": {
     "name": "Yuriy Tanskiy",
     "title": "Designer",
-    "photo": "/img/pic/yuraT.png",
+    "photo": "img/pic/yuraT.png",
     "started": "2/14/2012",
-    "caps": []
+    "caps": [],
+    "id": "b91637fc-4e1a-a3a4-a7da-1ca331e61988"
   },
-  {
+  "193a0b80-41f0-ae8d-e8d7-2da0f0b854e8": {
     "name": "Zhenya Chechurin",
     "title": "Front-end Developer",
-    "photo": "/img/pic/zhenjaX.png",
+    "photo": "img/pic/zhenjaX.png",
     "started": "3/20/2013",
-    "caps": [
-      {
-        "id": "8a9679ae-d882-ea6e-5525-69df7505c148",
-        "reason": "hjk jkhkjhkjh kjh kj kj"
-      }
-    ]
+    "caps": [],
+    "id": "193a0b80-41f0-ae8d-e8d7-2da0f0b854e8"
   },
-  {
+  "0a1fb04a-57f3-2c51-0100-973b5480dfe9": {
     "name": "Igor Kononuchenko",
     "title": "Team Lead",
     "photo": "img/pic/igorK-30.png",
     "started": "1/29/2011",
-    "caps": []
+    "caps": [],
+    "id": "0a1fb04a-57f3-2c51-0100-973b5480dfe9"
   },
-  {
+  "62c7439f-99f7-1137-f1c4-5fc1aedb1bc7": {
     "name": "Yuriy Bogdanov",
     "title": "Software Developer, Erlang",
-    "photo": "/img/pic/yuraB.png",
+    "photo": "img/pic/yuraB.png",
     "started": "3/12/2013",
-    "caps": []
+    "caps": [],
+    "id": "62c7439f-99f7-1137-f1c4-5fc1aedb1bc7"
   },
-  {
+  "ee54e192-3165-9ff2-db67-b48f419c2a79": {
     "name": "Dima Fillipenko",
     "title": "Front-end Developer",
     "photo": "img/pic/fil.png",
     "started": "12/18/2013",
-    "caps": []
+    "caps": [],
+    "id": "ee54e192-3165-9ff2-db67-b48f419c2a79"
   }
-]
+}

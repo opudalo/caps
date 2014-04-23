@@ -43,8 +43,8 @@
         <div class="give-people">
           <div class="give-people-item"
             ng-repeat="one in people"
-            ng-class="{__active: $index == give.peopleId}"
-            ng-click="setFormItem({peopleId: $index})"
+            ng-class="{__active: one.id == give.peopleId}"
+            ng-click="setFormItem({peopleId: one.id})"
             >
             <img class="give-people-item-img" ng-src="{{one.photo}}" alt="{{one.name}}">
           </div>

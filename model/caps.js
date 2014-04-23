@@ -14,6 +14,7 @@ module.exports = function (app) {
   return {
     get: get,
     add: add,
+    update: update,
     del: del
   }
 }
@@ -22,6 +23,11 @@ function *get(id) {
   var caps = db.get(capsdb, id)
 
   this.body = {ok: true, caps: caps}
+}
+
+function *update(id, obj) {
+  db.update(capsdb, obj)
+  console.log('cap updated', id, obj)
 }
 
 function *del(id) {
@@ -45,25 +51,22 @@ function *add() {
     }),
     part,
     
-    id = util.guid(),
-    cap = {}
-
-  cap[id] = {
-    id: id,
-    frontImg: 'img/caps/',
-    backImg: 'img/caps/',
-    name: '',
-    timestamp: Date.now()
-  }
+    cap = {
+      id: util.guid(),
+      frontImg: 'img/caps/',
+      backImg: 'img/caps/',
+      name: '',
+      timestamp: Date.now()
+    }
 
   while (part = yield parts) {
     var filename = util.guid() + '.' + part.mimeType.replace(/.*?\//,'')
     util.upload(capsImg + filename, part)
     
-    cap[id][part.fieldname] += filename
+    cap[part.fieldname] += filename
   }
 
-  cap[id].name = parts.field.name
+  cap.name = parts.field.name
  
   db.add(capsdb, cap)
   console.log('cap created: ', cap)

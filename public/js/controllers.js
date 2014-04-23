@@ -92,19 +92,25 @@ app.controller('MainCtrl', function($scope, $http) {
 
   function giveCap() {
     var give = $scope.give,
-      person = $scope.people[give.peopleId]
+      person = $scope.people[give.peopleId],
+      cap = $scope.caps[give.capId],
+      given = {}
+
     if (give.peopleId == null || give.capId == null || !give.reason) return
-    person.caps.push({
+    
+    given = {
       id: give.capId,
-      reason: give.reason
-    })
+      reason: give.reason,
+      timestamp: Date.now()
+    }
+    
+    person.caps.push(given)
 
-    $scope.caps[give.capId].owned = true
+    cap.owned = person.id
 
-
-    $http.put('/people', {
-        people: $scope.people,
-        capId: give.capId
+    $http.post('/give', {
+        people: person,
+        cap: cap 
       }, {
         headers: { 'Content-Type': 'application/json' },
       }).success(function(msg) {

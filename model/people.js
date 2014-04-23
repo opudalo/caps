@@ -6,8 +6,7 @@ var parse = require('co-busboy'),
 
 var path = require('../config').path,
   
-  peopledb = path.data + 'people.json',
-  capsImg = path.img + 'caps/'
+  peopledb = path.data + 'people.json'
 
 
 module.exports = function (app) {
@@ -22,13 +21,15 @@ module.exports = function (app) {
 function *add(id) {
 }
 
-function *update(id) {
+function *update(id, obj) {
+  db.update(peopledb, obj)
+  console.log('people updated', id, obj)
 }
 
 function *get(id) {
   var people = db.get(capsdb, id)
 
-  this.body = {ok: true, caps: caps}
+  this.body = {ok: true, people: people}
 }
 
 function *del(id) {

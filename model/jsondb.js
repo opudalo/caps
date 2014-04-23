@@ -4,6 +4,7 @@ var _ = require('underscore'),
 module.exports = {
   get: get,
   add: add,
+  update: update,
   del: del
 }
 
@@ -23,7 +24,17 @@ function get(db, id) {
 }
 
 function add(db, obj) {
-  extend(db, obj)
+  var o = {}
+  o[obj.id] = obj
+
+  extend(db, o)
+}
+
+function update(db, obj) {
+  var o = {}
+  o[obj.id] = obj
+  
+  extend(db, o)
 }
 
 function del(db, id) {
